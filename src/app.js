@@ -34,8 +34,8 @@ app.use(
   })
 );
 
-// (optional but helps with some preflight cases)
-app.options("*", cors());
+// ❌ app.options("*", cors()) hata diya
+// Express new router + path-to-regexp ke saath "*" direct allow nahi kar raha
 
 // ---------------- SECURITY & MIDDLEWARES ----------------
 app.use(helmet());
